@@ -1,3 +1,5 @@
+// srand(time(NULL)): see http://stackoverflow.com/questions/8724582/rand-not-generating-random-numbers-after-modulo-operation 
+
 #include <stdio.h>
 #include <stdlib.h>
 
