@@ -13,7 +13,8 @@ int main(void)
 	int turn =0; // 1 is computer, 0 is player
 	FILE *fp;
 
-	// turn = rand() % 2 +1;
+	srand(time(NULL)); // seed the random number generator
+	turn = rand() % 2; // not + 1
 
 	while(1)
 	{
