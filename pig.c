@@ -8,26 +8,26 @@ int main(void)
 	int roll;
 	char hold;
 	int turnTotal = 0;
-	int player1Total = 0;
-	int player2Total = 0;
+	int player1Total = 0; // human
+	int player2Total = 0; // computer
 	int turn =0; // 1 is computer, 0 is player
 	FILE *fp;
 
-	srand(time(NULL)); // seed the random number generator
-	turn = rand() % 2; // not + 1
+	srand(time(NULL)); // seed the random number generator with the time so it changes each time runs
+	turn = rand() % 2; // not %2 + 1, since we want 0 or 1, not 1 or 2
 
 	while(1)
 	{
 		if (player1Total >= 100)
 		{
-			printf("Player 1 wins!\n");
+			printf("You win!\n");
 			fp = fopen("Scores", "a+");
 			fprintf(fp, "%d\n", player1Total);
 			break;
 		}
 		if (player2Total >= 100)
 		{
-			printf("Player 2 wins!\n");
+			printf("Computer wins!\n");
 			fp = fopen("Scores", "a+");
 			fprintf(fp, "%d\n", player2Total);
 			break;
